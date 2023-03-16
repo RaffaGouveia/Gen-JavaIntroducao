@@ -8,9 +8,9 @@ public class SwitchCase1 {
 		Scanner read = new Scanner(System.in);
 		
 		System.out.println("\n\tLista de produtos ");
-		System.out.println("\n(1) Cachorro Quente   (2) X-Salada");
-		System.out.println("\n(3) X-Bacon           (4) Bauru");
-		System.out.println("\n(5) Refrigerante      (6) Suco de Laranja");
+		System.out.println("\n(1) Cachorro Quente R$ 10,00  (2) X-Salada R$ 15,00");
+		System.out.println("\n(3) X-Bacon  R$ 18,00         (4) Bauru R$ 12,00");
+		System.out.println("\n(5) Refrigerante  R$ 8,00     (6) Suco de Laranja R$ 13,00");
 		System.out.println("\nQual o item comprado? ");
 		item = read.nextInt();
 		System.out.println("\nQual a quantidade comprada? ");
