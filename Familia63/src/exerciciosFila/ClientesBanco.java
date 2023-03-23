@@ -1,5 +1,6 @@
 package exerciciosFila;
 
+import java.util.InputMismatchException;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
@@ -9,12 +10,15 @@ public class ClientesBanco {
 	public static void main(String[] args) {
 		Queue<String> fila = new LinkedList<String>();
 		Scanner input = new Scanner(System.in);
+		int opcao;
 		while (true) {
 			System.out.println(" ==========================================================================");
 			System.out.println(" ||======================================================================||");
 			System.out.println(" ||                                                                      ||");
 			System.out.println(" ||                         Banco Rouffos                                ||");
+			System.out.println(" ||                                                                      ||");
 			System.out.println(" ||======================================================================||");
+			System.out.println(" ||                                                                      ||");
 			System.out.println(" ||                     Chegada Clientes Banco                           ||");
 			System.out.println(" ||                                                                      ||");
 			System.out.println(" ||======================================================================||");
@@ -25,7 +29,13 @@ public class ClientesBanco {
 			System.out.println(" ||                    Entre com a opção desejada                        ||");
 			System.out.println(" ||======================================================================||");
 			System.out.println(" ==========================================================================");
-			int opcao = input.nextInt();
+			try {
+				opcao = input.nextInt();
+			} catch (InputMismatchException e) {
+				System.out.println("Por favor, digite números inteiros! ");
+				input.nextLine();
+				opcao = 0;
+			}
 			if (opcao == 0) {
 				System.out.println("Banco Rouffos -- Seu FUTURO é aqui!");
 				input.close();

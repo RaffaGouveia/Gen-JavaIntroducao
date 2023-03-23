@@ -1,5 +1,6 @@
 package exerciciosStack;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -8,7 +9,7 @@ public class Livros {
 	public static void main(String[] args) {
 		Stack<String> livros = new Stack<String>();
 		Scanner input = new Scanner(System.in);
-
+		int opcao;
 		while (true) {
 
 			System.out.println(" ================================================================================");
@@ -24,7 +25,13 @@ public class Livros {
 			System.out.println(" ||                            Entre com a opção desejada                      ||");
 			System.out.println(" ||============================================================================||");
 			System.out.println(" ================================================================================");
-			int opcao = input.nextInt();
+			try {
+				opcao = input.nextInt();
+			} catch (InputMismatchException e) {
+				System.out.println("Por favor, digite números inteiros! ");
+				input.nextLine();
+				opcao = 0;
+			}
 			if (opcao == 0) {
 				System.out.println("\nObrigado por utilizar a biblioteca!");
 				System.out.println("Volte sempre!!");
@@ -47,12 +54,12 @@ public class Livros {
 				if (livros.isEmpty()) {
 					System.out.println("A pilha está vazia! \n\n");
 				} else {
-					System.out.println("Aqui está o livro " + livros.peek()+"\n\n");
+					System.out.println("Aqui está o livro " + livros.peek() + "\n\n");
 					livros.pop();
 				}
 				break;
-				default:
-					System.out.println("A opção é invalida, por favor digite novamente! \n\n");
+			default:
+				System.out.println("A opção é invalida, por favor digite novamente! \n\n");
 			}
 		}
 
