@@ -14,9 +14,10 @@ public class NumerosSet {
 
 		for (int i = 0; i < 10; i++) {
 			System.out.println("Digite o " + (i + 1) + "° número:");
-			Integer x = input.nextInt();
+			int x = input.nextInt();
 			numeros.add(x);
 		}
+		System.out.println(numeros);
 		Iterator<Integer> inumeros = numeros.iterator();
 		while (inumeros.hasNext()) {
 			System.out.println(inumeros.next());

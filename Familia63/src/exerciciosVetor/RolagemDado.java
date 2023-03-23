@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class RolagemDado {
 	static Scanner input = new Scanner(System.in);
 
+
 	public static void main(String[] args) {
 		int tamanho = tamanhoNumeros();
 		int rolagemDado[] = lerRolagemDado(tamanho);

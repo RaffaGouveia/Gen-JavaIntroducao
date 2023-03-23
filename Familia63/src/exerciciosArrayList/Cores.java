@@ -2,6 +2,7 @@ package exerciciosArrayList;
 
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Cores {
 	public static void main(String[] args) {
@@ -10,7 +11,7 @@ public class Cores {
 		int x;
 		do {
 			System.out.println("---------------------------------------------");
-			System.out.println("\t\t\t-Menu de Cores-");
+			System.out.println("\t\t-Menu de Cores-");
 			System.out.println("\t(1) Deseja adicionar uma cor?");
 			System.out.println("\t(2) Deseja ver as cores da lista?");
 			System.out.println("\t(3) Deseja ver as cores em ordem crescente?");
@@ -33,12 +34,14 @@ public class Cores {
 			case 3:
 				input.nextLine();
 				System.out.println("\tCores do menu em ordem crescente:");
-				cores.sort(null);
+				Collections.sort(cores);
 				System.out.println(cores);
 				break;
 			case 0:
 				System.out.println("\tObrigado por utilizar o menu de cores..!!");
 				System.out.println("\tVolte sempre!!");
+			default:
+				System.out.println("Número inválido, por favor digite novamente!");
 
 			}
 
